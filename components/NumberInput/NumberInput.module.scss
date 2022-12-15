@@ -1,0 +1,56 @@
+.container {
+    display: inline-flex;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+    align-content: stretch;
+    justify-content: center;
+    & button {
+        padding: 1px;
+    }
+}
+
+.inputWrapper {
+    display: inline-block;
+}
+
+.input {
+    transition: color 0.1s ease;
+    line-height: calc(1.5em + 0.5rem);
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-2px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-3px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(3px, 0, 0);
+    }
+}
+
+.shake {
+    color: red;
+    animation: shake 1s infinite;
+}

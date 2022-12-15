@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+}
+
+.hidden {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.label {
+    display: flex;
+    line-height: 1;
+    justify-content: space-between;
+    align-items: center;
+
+    &:focus-within {
+        .checkboxWrapper {
+            background-color: lightgray;
+        }
+    }
+}
+
+.checkboxWrapper {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 50%);
+
+    margin-left: 0.5em;
+    &:hover {
+        background-color: lightgray;
+    }
+}
+
+.checkbox {
+    height: 80%;
+    width: 80%;
+    background-color: #c5c5c5;
+    background-image: url("/check.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 0% 0%;
+    transition: background-size 0.1s ease-in-out;
+
+    &.checked {
+        background-size: 90% 90%;
+    }
+}

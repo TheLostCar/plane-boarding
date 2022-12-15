@@ -1,0 +1,152 @@
+.container {
+    position: absolute;
+    display: flex;
+    user-select: none;
+    touch-action: none;
+}
+
+.wrapper {
+    *:disabled {
+        pointer-events: none;
+    }
+}
+.disabled {
+    color: darkgray;
+    pointer-events: none;
+}
+.disabled .alwaysActive {
+    color: inherit;
+    pointer-events: all;
+}
+
+.edge {
+    background-color: hsl(235deg 15% 40% / 60%);
+    border-radius: 10px;
+    min-width: 250px;
+    min-height: 500px;
+    max-height: 1000px;
+    max-width: 250px;
+
+    transition: max-width 0.5s, min-width 0.5s, max-height 0.5s, min-height 0.2s, background-color 0.5s;
+    overflow: hidden;
+
+    &.closed {
+        background-color: hsl(235deg 20% 10% / 70%);
+        transition: max-width 0.5s, min-width 0.5s, max-height 0.2s, min-height 0.5s, background-color 0.5s;
+        min-height: 3rem;
+        max-height: 3rem;
+        max-width: 3rem;
+        min-width: 3rem;
+    }
+}
+
+.minimize {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 2rem;
+    height: 2rem;
+    opacity: 1;
+    transition: opacity 0.2s;
+    &.closed {
+        opacity: 0;
+    }
+    svg {
+        fill: hsl(237deg 10% 70%);
+        padding: 10%;
+    }
+    &:hover {
+        svg {
+            fill: hsl(237deg 20% 60%);
+        }
+    }
+}
+
+.hamburger {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+
+    padding: 10%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.1s;
+    &.hamburgerVisible {
+        transition: opacity 2s;
+        opacity: 1;
+        z-index: 10;
+    }
+}
+
+.background {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    padding-bottom: 10px;
+
+    color: white;
+    background-color: hsl(235deg 20% 10% / 70%);
+    border-radius: 10px;
+
+    margin: 4%;
+    opacity: 1;
+    transition: margin 1s, opacity 1s;
+    &.closed {
+        opacity: 0;
+        margin: 0%;
+    }
+}
+
+.displayNone {
+    display: none;
+}
+.dragging {
+    user-select: none;
+}
+
+.row {
+    margin: 10px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    white-space: nowrap;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: stretch;
+    margin: 0 10%;
+    > * {
+        margin: 1% 0;
+    }
+}
+
+.numberLabelContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controlButton {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: hsl(230deg 60% 50%);
+
+    &:hover,
+    &:focus {
+        background-color: hsl(230deg 60% 45%);
+    }
+}
+
+.marginTopAuto {
+    margin-top: auto;
+}

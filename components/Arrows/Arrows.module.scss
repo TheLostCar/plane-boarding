@@ -1,0 +1,26 @@
+.arrow {
+    display: inline-block;
+    height: 100%;
+    fill: rgb(172, 172, 172);
+    &:focus-within,
+    &:hover {
+        svg {
+            fill: rgb(228, 228, 228);
+        }
+    }
+    svg {
+        height: 100%;
+    }
+}
+
+.srOnly {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}

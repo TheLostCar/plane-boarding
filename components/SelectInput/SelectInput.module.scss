@@ -1,0 +1,53 @@
+.container {
+    position: relative;
+    width: 100%;
+}
+.toggleOpenButton {
+    text-transform: capitalize;
+    border-bottom: 2px solid hsl(230deg 35% 60%);
+    padding: 0 5%;
+    &:focus {
+        border-bottom: 2px solid hsl(230deg 35% 80%);
+        color: hsl(230deg 50% 80%);
+    }
+    &:hover {
+        color: hsl(230deg 50% 80%);
+    }
+}
+
+.options {
+    text-transform: capitalize;
+    padding: 0;
+
+    transform-origin: top;
+
+    position: absolute;
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+
+    left: 50%;
+    transform: translate(-50%, 0%) scaleY(0%);
+    transition: transform 0.3s, visibility 0.3s;
+
+    > button {
+        border: 5px solid hsl(230deg 35% 45%);
+        padding: 5px;
+        background-color: hsl(230deg 35% 45%);
+    }
+    > button:hover {
+        background-color: hsl(230deg 35% 40%);
+        border-color: hsl(230deg 35% 40%);
+    }
+
+    > button:focus {
+        border-color: hsl(230deg 35% 50%);
+    }
+}
+
+.optionsOpen {
+    visibility: visible;
+    transform: translate(-50%, 0%) scaleY(100%);
+}
