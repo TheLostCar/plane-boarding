@@ -1,34 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Plane Boarding Simulation
 
-## Getting Started
+## Boarding Methods
 
-First, run the development server:
+Allows for simulation of the following boarding methods.
+The amount of boarding groups can be changed.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- Random
+- Back To Front
+- Front To Back
+- Rotating Zone
+- Wilma Straight
+- Wilma Block
+- Steffen Perfect
+- Steffen Modified
+- Reverse Pyramid
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Plane
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+The plane can be modified to change the number of rows and columns to customize the amount of passengers.
+The size alters the size of all passengers and seats, allowing more/less to fit on screen.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Passengers
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The base speed of walking and stowing can be altered.
+Get differing speeds by toggling the random speed/stow.
 
-## Learn More
+## Order of Seat Assignment
+Below is the order in which seats are generated and assigned to a group.
 
-To learn more about Next.js, take a look at the following resources:
+The order of the first 10 seats ( s ) are labelled.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The center walking path is labelled with ( - ).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This order continues until all seats are created.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+|       |       |       |       |       |
+| :---: | :---: | :---: | :---: | :---: |
+|  s₁   |  s₂   |  s₃   |  s₄   |  s₅   |
+|  s₆   |  s₇   |  s₈   |  s₉   |  s₁₀  |
+|   -   |   -   |   -   |   -   |   -   |
+|  s₁₁  |   s   |   s   |   s   |   s   |
+|  s₁₆  |   s   |   s   |   s   |   s   |
