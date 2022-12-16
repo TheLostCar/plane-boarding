@@ -1,0 +1,57 @@
+.infoIconWrapper {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10001;
+
+    &:hover {
+        svg {
+            fill: hsl(345, 60%, 50%);
+        }
+    }
+}
+
+.infoContainer {
+    position: fixed;
+    z-index: 10000;
+    background-color: hsla(0, 0%, 43%, 0.486);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    &.open {
+        display: flex;
+    }
+}
+
+.infoWrapper {
+    width: 500px;
+    min-height: 500px;
+    background-color: hsl(0, 0%, 21%);
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+
+    a {
+        color: skyblue;
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.infoContent {
+    display: flex;
+    flex-direction: column;
+
+    gap: 50px;
+    flex: 1;
+}

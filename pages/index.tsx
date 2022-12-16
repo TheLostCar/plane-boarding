@@ -6,6 +6,7 @@ import usePassengerAssets from '@hooks/usePassengerAssets';
 import styles from '../styles/Home.module.css';
 
 import useSettings from '@hooks/useSettings';
+import Info from '@components/Info';
 const Home: NextPage = () => {
   const { planeState, dispatch } = useSettings();
   const { drawAsset } = usePassengerAssets(planeState.size);
@@ -29,6 +30,7 @@ const Home: NextPage = () => {
 
       </Head>
 
+      <Info />
       <PlaneBoardingSimulation planeState={planeState} drawAsset={drawAsset} />
       {/* <PlaneBoardingCanvas dispatch={dispatch} drawAsset={drawAsset} planeState={planeState} /> */}
 
