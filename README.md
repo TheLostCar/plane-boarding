@@ -1,9 +1,11 @@
 # Plane Boarding Simulation
 
-## Boarding Methods
 
-Allows for simulation of the following boarding methods.
-The amount of boarding groups can be changed.
+## Summary
+
+Visit the [Live Demo.](https://plane-boarding.vercel.app/)
+
+Allows for simulation of the following plane boarding methods.
 
 - Random
 - Back To Front
